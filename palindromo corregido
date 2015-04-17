@@ -1,0 +1,19 @@
+#include <iostream>
+#include <string>
+#include <algorithm>
+using namespace std;
+bool palyndromo (string n1)
+{
+	string pal_n1(n1.begin(), n1.end());
+	reverse(n1.begin(), n1.end());
+	return (pal_n1==n1);
+}
+
+int main ()
+{
+	string n1, n2;
+	cout<<"dame un palabra"<<endl;
+	cin>>n1;
+	bool isPalindrome = palyndromo(n1);
+	cout<<isPalindrome;
+}
